@@ -8,7 +8,7 @@ USER root
 RUN curl https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - && \
     curl https://storage.googleapis.com/download.dartlang.org/linux/debian/dart_stable.list > /etc/apt/sources.list.d/dart_stable.list && \
     apt-get update && \
-    apt-get -y install build-essential dart libkrb5-dev gcc make gradle android-tools-adb android-tools-fastboot openjdk-8-jdk && \
+    apt-get -y install build-essential openjdk-8-jdk dart libkrb5-dev gcc make gradle android-tools-adb android-tools-fastboot && \
     update-java-alternatives --set java-1.8.0-openjdk-amd64 && \
     apt-get clean && \
     apt-get -y autoremove && \
